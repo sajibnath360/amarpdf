@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /projects.github.io/amarpdf/
+Sitemap: https://sajibnath360.github.io/projects.github.io/amarpdf/sitemap.xml
