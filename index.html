@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>AmarPDF — Free PDF Editor, PDF Tools &amp; Image Resizer Online</title>
+  <meta name="description" content="AmarPDF is a free online PDF editor and PDF toolkit. Edit, merge, compress, split, sign and convert PDFs, resize images, and work privately in your browser.">
+  <meta name="keywords" content="AmarPDF, free PDF editor, online PDF editor, PDF tools, free PDF tools, edit PDF online, merge PDF, compress PDF, split PDF, extract PDF pages, delete PDF pages, rotate PDF, sign PDF, PDF to image, image to PDF, image resizer, resize JPG, resize PNG, resize WebP">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Sajib Kumar Nath">
+  <meta name="application-name" content="AmarPDF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AmarPDF">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <meta name="theme-color" content="#e5322d">
+  <link rel="canonical" href="https://sajibnath360.github.io/amarpdf/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AmarPDF">
+  <meta property="og:url" content="https://sajibnath360.github.io/amarpdf/">
+  <meta property="og:title" content="AmarPDF — Free PDF Editor, PDF Tools &amp; Image Resizer Online">
+  <meta property="og:description" content="Free online PDF editor, PDF tools and image resizer. Edit, merge, compress, split, sign and convert files privately in your browser.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AmarPDF — Free PDF Editor, PDF Tools &amp; Image Resizer Online">
+  <meta name="twitter:description" content="Free online PDF editor, PDF tools and image resizing with browser-only processing.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e5322d'/%3E%3Cpath d='M18 12h21l11 11v29H18z' fill='white'/%3E%3Cpath d='M39 12v13h13' fill='%23e5322d'/%3E%3Ctext x='31' y='46' text-anchor='middle' font-family='Arial' font-size='16' font-weight='700' fill='%2333333b'%3EPDF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" data-home><span class="brand-mark" aria-hidden="true">AP</span><span>AmarPDF</span></a>
+  <nav><a href="#tools">All PDF Tools</a><a href="#privacy">How it works</a><a href="#about">About</a></nav><a id="donateTop" class="btn btn-support" href="#" target="_blank" rel="noopener">♥ Support me</a>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">FREE • PRIVATE • BROWSER-BASED</span>
+      <h1>Free PDF Editor, PDF Tools &amp; Image Resizer Online</h1>
+      <p>Edit PDF files online, merge PDFs, compress documents, split and organize pages, add signatures, convert PDFs to images, or resize JPG, PNG and WebP images. AmarPDF processes files directly in your browser for fast, private and simple document work.</p>
+      <label class="hero-drop" id="homeDrop">
+        <input id="homeInput" type="file" accept="application/pdf,.pdf" multiple>
+        <span class="upload-icon">↑</span>
+        <strong>Choose PDF files</strong>
+        <span>or drag & drop them here</span>
+      </label>
+      <div id="homeFiles" class="selected-files hidden"></div>
+      <div id="homeActions" class="quick-actions hidden"></div>
+      <p class="privacy-note">Nothing is sent to a server by this site. A 30-minute local workspace timer clears in-memory working files.</p>
+    </div>
+  </section>
+
+  <section id="tools" class="section">
+    <div class="section-head">
+      <div><span class="eyebrow">PDF TOOLBOX</span><h2>Free PDF tools online</h2></div>
+      <input id="toolSearch" class="search" placeholder="Search tools…" autocomplete="off">
+    </div>
+    <div id="toolGrid" class="tool-grid"></div>
+  </section>
+
+  <section id="workspace" class="section workspace hidden">
+    <div class="workspace-head">
+      <div class="workspace-nav">
+        <button id="backBtn" class="workspace-back" type="button" aria-label="Back to PDF tools"><span class="workspace-back-arrow">←</span><span>Tools</span></button>
+      </div>
+      <div class="workspace-title">
+        <span id="toolKicker" class="eyebrow"></span>
+        <h2 id="toolTitle"></h2>
+        <p id="toolDesc"></p>
+      </div>
+      <div class="workspace-meta">
+        <div class="timer" title="Local workspace cleanup timer">Privacy timer <b id="timer">30:00</b></div>
+      </div>
+    </div>
+    <div id="toolMount"></div>
+    <div id="status" class="status" aria-live="polite"></div><div id="completionNotice" class="completion-notice hidden"><strong>Privacy notice</strong><span>Your temporary working data will be automatically cleared from this page after 30 minutes. Files you download remain on your device and cannot be deleted by this website.</span></div>
+  </section>
+
+  <section id="seo-features" class="seo-content" aria-labelledby="seoFeaturesTitle">
+    <div class="seo-content-inner">
+      <span class="eyebrow">PDF &amp; IMAGE TOOLS</span>
+      <h2 id="seoFeaturesTitle">Free online PDF editor, PDF tools and image resizer</h2>
+      <p>AmarPDF brings common document and image tasks together in one browser-based workspace. Use the <strong>PDF editor</strong> to edit PDF text and page objects, <strong>merge PDF</strong> files, <strong>compress PDF</strong> documents, split or extract pages, rotate pages, add signatures, watermarks and page numbers, fill PDF forms, and convert between PDFs and images.</p>
+      <div class="seo-tool-list">
+        <article><h3>PDF Editor</h3><p>Edit PDF text and page elements directly in the browser and export a new PDF.</p></article>
+        <article><h3>Merge &amp; Compress PDF</h3><p>Combine multiple PDF files or reduce PDF file size with adjustable compression settings.</p></article>
+        <article><h3>Split, Extract &amp; Organize PDF</h3><p>Split PDFs, extract pages, delete pages, rearrange pages, rotate pages and resize PDF pages.</p></article>
+        <article><h3>Image Resize</h3><p>Resize JPG, PNG and WebP images by exact pixel dimensions, aspect ratio, long edge, print size and DPI, with batch processing and target file-size options.</p></article>
+        <article><h3>PDF to Images &amp; Images to PDF</h3><p>Export PDF pages to images or create a PDF from JPG, PNG and WebP images.</p></article>
+        <article><h3>PDF Signing &amp; Forms</h3><p>Add a signature image and fill supported PDF form fields without uploading the document.</p></article>
+      </div>
+      <p class="seo-note">AmarPDF is a static GitHub Pages web app. PDF and image processing happens locally in your browser; this project does not upload your working files to a PDF-processing server.</p>
+    </div>
+  </section>
+
+  <section id="how-to" class="seo-content" aria-labelledby="howToTitle">
+    <div class="seo-content-inner">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2 id="howToTitle">How to use AmarPDF</h2>
+      <div class="seo-tool-list howto-grid">
+        <article><h3>1. Choose a PDF or image tool</h3><p>Select the task you need, such as Edit PDF, Merge PDF, Compress PDF, Split PDF, PDF to Images, Images to PDF or Image Resize.</p></article>
+        <article><h3>2. Select your files</h3><p>Choose files from your device or drag them into the tool. Your working files stay in the browser during processing.</p></article>
+        <article><h3>3. Adjust the options</h3><p>Set compression quality, page order, dimensions, output format or other options available for the selected tool.</p></article>
+        <article><h3>4. Process and download</h3><p>Run the tool and download the generated file when it is ready. AmarPDF does not need a PDF-processing upload server.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="seo-content faq-section" aria-labelledby="faqTitle">
+    <div class="seo-content-inner">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="faqTitle">Frequently asked questions</h2>
+      <details><summary>Is AmarPDF free?</summary><p>Yes. AmarPDF is designed as a free browser-based PDF and image utility website.</p></details>
+      <details><summary>Can I edit a PDF online with AmarPDF?</summary><p>Yes. The Edit PDF tool lets you open a PDF, work with editable text and page objects, apply the changes and download the generated PDF.</p></details>
+      <details><summary>Can I resize JPG, PNG or WebP images?</summary><p>Yes. Image Resize supports common image formats and controls for pixel dimensions, aspect ratio, long edge, print size, DPI and output format.</p></details>
+      <details><summary>Are my PDF and image files uploaded?</summary><p>The document and image processing in AmarPDF happens in the browser. The site does not use an upload API for the PDF and image tools.</p></details>
+    </div>
+  </section>
+
+  <section id="privacy" class="info-section">
+    <div><span class="eyebrow">PRIVACY</span><h2>Your PDF stays on your device.</h2></div>
+    <p>AmarPDF is designed as a static GitHub Pages site. PDF processing happens in your browser. There is no upload API in this project. The 30-minute timer clears the page's working references and object URLs; a file you already downloaded cannot be deleted from your device by a website.</p>
+  </section>
+
+  <section id="about" class="info-section">
+    <div><span class="eyebrow">ABOUT</span><h2>Built to be useful, not complicated.</h2></div>
+    <p>AmarPDF uses browser JavaScript plus PDF.js and pdf-lib. The project has no framework or build step, so you can customize the separate CSS/JS files and host it directly on GitHub Pages.</p>
+  </section>
+</main>
+
+<footer>
+  <span>© all rights reserved by <a class="footer-owner" href="https://mail.google.com/mail/?view=cm&fs=1&to=sajibkumarnath360@gmail.com" target="_blank" rel="noopener noreferrer">SAJIB KUMAR NATH</a></span>
+  <a id="donateBottom" href="#" target="_blank" rel="noopener">Support the project ♥</a>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://sajibnath360.github.io/amarpdf/#website",
+      "url":"https://sajibnath360.github.io/amarpdf/",
+      "name":"AmarPDF",
+      "description":"Free online PDF editor, PDF tools and image resizer that processes working files in the browser."
+    },
+    {
+      "@type":"WebApplication",
+      "@id":"https://sajibnath360.github.io/amarpdf/#app",
+      "url":"https://sajibnath360.github.io/amarpdf/",
+      "name":"AmarPDF",
+      "description":"Free online PDF editor, PDF toolkit and image resizer. Edit, merge, compress, split, sign and convert PDF files in your browser.",
+      "applicationCategory":"UtilitiesApplication",
+      "operatingSystem":"Web Browser",
+      "browserRequirements":"Requires a modern web browser with JavaScript enabled.",
+      "isAccessibleForFree":true,
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "featureList":["Edit PDF","Merge PDF","Compress PDF","Split PDF","Extract PDF pages","Delete PDF pages","Rearrange PDF pages","Rotate PDF","Watermark PDF","Add PDF page numbers","Resize PDF pages","Fill PDF forms","Add PDF signature","PDF to Images","Images to PDF","Resize JPG images","Resize PNG images","Resize WebP images","Image dimensions and DPI controls"]
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://sajibnath360.github.io/amarpdf/#webpage",
+      "url":"https://sajibnath360.github.io/amarpdf/",
+      "name":"AmarPDF — Free PDF Editor, PDF Tools & Image Resizer Online",
+      "description":"Free online PDF editor, PDF tools and image resizer with browser-based processing.",
+      "isPartOf":{"@id":"https://sajibnath360.github.io/amarpdf/#website"},
+      "about":{"@id":"https://sajibnath360.github.io/amarpdf/#app"},
+      "inLanguage":"en"
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://sajibnath360.github.io/amarpdf/#faq",
+      "mainEntity":[
+        {"@type":"Question","name":"Is AmarPDF free?","acceptedAnswer":{"@type":"Answer","text":"Yes. AmarPDF is designed as a free browser-based PDF and image utility website."}},
+        {"@type":"Question","name":"Can I edit a PDF online with AmarPDF?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Edit PDF tool lets you open a PDF, work with editable text and page objects, apply the changes and download the generated PDF."}},
+        {"@type":"Question","name":"Can I resize JPG, PNG or WebP images?","acceptedAnswer":{"@type":"Answer","text":"Yes. Image Resize supports common image formats and controls for pixel dimensions, aspect ratio, long edge, print size, DPI and output format."}},
+        {"@type":"Question","name":"Are my PDF and image files uploaded?","acceptedAnswer":{"@type":"Answer","text":"The document and image processing in AmarPDF happens in the browser. The site does not use an upload API for the PDF and image tools."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Classic scripts are intentional: this also works when you open index.html locally. -->
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+  // Use the PDF.js worker on normal web hosting for better performance.
+  // When opened directly as file://, disable the worker for local-file compatibility.
+  if (window.pdfjsLib) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      location.protocol === "file:"
+        ? ""
+        : "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  }
+</script>
+<script src="app.js"></script>
+</body>
+</html>
