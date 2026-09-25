@@ -553,9 +553,7 @@ body{
   overflow:hidden;
   padding:76px 5% 70px;
   border-bottom:1px solid #e7eaee;
-  background:
-    radial-gradient(650px 250px at 50% 0%,rgba(230,239,248,.92),transparent 72%),
-    linear-gradient(180deg,#fbfcfd 0%,#f6f8fa 100%);
+  background:;
 }
 .hero:before{
   content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
